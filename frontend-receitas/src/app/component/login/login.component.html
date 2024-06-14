@@ -1,0 +1,27 @@
+<div class="body">
+  <div class="main">
+    <div class="header">
+      <h2>Acesso Cliente
+        <span>
+          <img src="/assets/logo.png" alt="" style="width: 30%;">
+        </span>
+      </h2>
+    </div>
+    <div class="contactus">
+      <form [formGroup]="loginForm">
+        <input type="email"
+               placeholder="Digite seu Email."
+               formControlName="email"
+               required >
+        <input type="password"
+               formControlName="password"
+               placeholder="Digite sua senha."
+               required>
+        <div class="align-items-center"><button class="center-button" (click)="submit()">Entrar</button></div>
+      </form>
+      <div class="align-items-center">
+      <div class="signup"><a href="#"><b>Cadastre-se</b></a></div>
+      </div>
+    </div>
+  </div>
+</div>

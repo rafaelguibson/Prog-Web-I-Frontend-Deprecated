@@ -31,6 +31,7 @@ import { DialogDeleteComponent } from './component/dialog-delete/dialog-delete.c
 import {MatDialogClose} from "@angular/material/dialog";
 import { DialogSucessComponent } from './component/dialog-sucess/dialog-sucess.component';
 import { DialogUpdateComponent } from './component/dialog-update/dialog-update.component';
+import { LoginComponent } from './component/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DialogUpdateComponent } from './component/dialog-update/dialog-update.c
     RegisterDialogComponent,
     DialogDeleteComponent,
     DialogSucessComponent,
-    DialogUpdateComponent
+    DialogUpdateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
