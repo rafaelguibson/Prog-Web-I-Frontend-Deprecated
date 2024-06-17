@@ -26,10 +26,21 @@ export class ReceitaHttpclienteService {
   }
 
   listarTodos(): Observable<Receita[]> {
+    // const tokenString = localStorage.getItem('auth-token');
+    // let token: { accessToken: string } = { accessToken: '' };
+    //
+    // if (tokenString) {
+    //   token = JSON.parse(tokenString);
+    //   console.log(token);
+    // }
 
-    return this.http.get<Receita[]>(this.baseUrl);
+    const headers = {
+      'Authorization': 'Bearer ' + localStorage.getItem('auth-token')
+    };
 
+    return this.http.get<Receita[]>(this.baseUrl, { headers });
   }
+
 
   excluir(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);

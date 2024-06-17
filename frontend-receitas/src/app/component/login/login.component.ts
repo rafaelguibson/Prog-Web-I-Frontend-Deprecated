@@ -34,8 +34,6 @@ export class LoginComponent {
       this.authenticationHttpService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
         next: (data) => {
           console.log(data);
-          sessionStorage.setItem("auth-token", data.token);
-          sessionStorage.setItem("username", data.name);
           this.router.navigate(['/receitas'])
         }, error: (err) => {
           this.showAlert(err.error);

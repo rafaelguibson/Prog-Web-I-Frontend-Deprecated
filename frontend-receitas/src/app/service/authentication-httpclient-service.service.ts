@@ -15,6 +15,11 @@ export class AuthenticationHttpclientServiceService {
   }
 
   login(email: string, password: string) {
-    return this.httpClient.post<LoginResponse>(this.apiUrl + "/login", {email, password});
+    return this.httpClient.post<LoginResponse>(this.apiUrl + "/login", {email, password}).pipe(
+      tap(value => {
+        localStorage.setItem("auth-token", value.token);
+        localStorage.setItem("username", value.name);
+      })
+    );
   }
 }
