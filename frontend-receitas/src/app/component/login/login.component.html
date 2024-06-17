@@ -7,8 +7,12 @@
         </span>
       </h2>
     </div>
-    <div class="contactus">
-      <form [formGroup]="loginForm">
+
+    <div class="contactus" >
+      <div class="alert alert-danger alert-div" role="alert" *ngIf="showMessage">
+        <strong>{{messagem}}</strong>
+      </div>
+      <form [formGroup]="loginForm" style="margin: 0; border: 0">
         <input type="email"
                placeholder="Digite seu Email."
                formControlName="email"
@@ -25,3 +29,4 @@
     </div>
   </div>
 </div>
+

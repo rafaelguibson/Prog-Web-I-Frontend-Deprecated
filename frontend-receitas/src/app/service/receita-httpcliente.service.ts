@@ -26,6 +26,7 @@ export class ReceitaHttpclienteService {
   }
 
   listarTodos(): Observable<Receita[]> {
+
     return this.http.get<Receita[]>(this.baseUrl);
 
   }

@@ -96,3 +96,8 @@ a {
 .signup a {
   display: inline-block;
 }
+.alert-div{
+  width: 100%;
+  margin: 0;
+  border: 0
+}

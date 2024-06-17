@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable, pipe, tap} from "rxjs";
 import {LoginResponse} from "../models/user";
+import {Router} from "@angular/router";
 
 
 @Injectable({
@@ -10,14 +11,10 @@ import {LoginResponse} from "../models/user";
 export class AuthenticationHttpclientServiceService {
   apiUrl: string = "http://localhost:8080/auth";
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, public router: Router) {
+  }
 
-  login(email: string, password: string){
-    return this.httpClient.post<LoginResponse>(this.apiUrl + "/login", { email, password }).pipe(
-      tap((value) => {
-        sessionStorage.setItem("auth-token", value.token)
-        sessionStorage.setItem("username", value.name)
-      })
-    )
+  login(email: string, password: string) {
+    return this.httpClient.post<LoginResponse>(this.apiUrl + "/login", {email, password});
   }
 }
