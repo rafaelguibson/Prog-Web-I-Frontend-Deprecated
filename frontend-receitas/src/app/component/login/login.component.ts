@@ -35,6 +35,7 @@ export class LoginComponent {
         next: (data) => {
           console.log(data);
           this.router.navigate(['/receitas'])
+          this.openSnackBar('Login successful!');
         }, error: (err) => {
           this.showAlert(err.error);
           console.log(err.error)
@@ -45,6 +46,7 @@ export class LoginComponent {
   openSnackBar(message: string) {
     this._snackBar.open(message, 'Close',  {
       duration: this.durationInSeconds * 1000,
+      panelClass: ['custom-snack-bar']
     });
   }
 

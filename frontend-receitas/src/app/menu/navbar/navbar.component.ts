@@ -8,6 +8,7 @@ import {RegisterDialogComponent} from "../../component/register-dialog/register-
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  showFiller: boolean = true;
   constructor(public dialog: MatDialog) {}
 
 

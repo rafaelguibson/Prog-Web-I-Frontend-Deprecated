@@ -2,7 +2,7 @@ import {
   ComponentPortal,
   Overlay,
   OverlayModule
-} from "./chunk-URDFSF73.js";
+} from "./chunk-M5EK3CQR.js";
 import {
   animate,
   state,
@@ -13,7 +13,8 @@ import {
 import {
   CdkScrollableModule,
   ScrollDispatcher
-} from "./chunk-7JAHRYGU.js";
+} from "./chunk-PGY2TXYY.js";
+import "./chunk-R7PDFL22.js";
 import {
   A11yModule,
   AriaDescriber,
@@ -26,7 +27,7 @@ import {
   coerceNumberProperty,
   hasModifierKey,
   normalizePassiveListenerOptions
-} from "./chunk-YQ2QJ2KO.js";
+} from "./chunk-M7FKSPZ6.js";
 import {
   CommonModule,
   DOCUMENT,

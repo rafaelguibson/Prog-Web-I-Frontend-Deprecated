@@ -101,3 +101,23 @@ a {
   margin: 0;
   border: 0
 }
+.border_text{
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #08323b;
+  font-size: 1em;
+  background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+
+  /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+  background-clip: text;
+  -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+  /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+  -webkit-text-fill-color: transparent;
+
+  /* Cor que contraste com o degradê, caso o navegador não suporte `background-clip: text` */
+  color: black;
+}
+.custom-snack-bar {
+  background-color: #ff4081; /* Altere esta cor conforme necessário */
+  color: white; /* Altere a cor do texto se necessário */
+}

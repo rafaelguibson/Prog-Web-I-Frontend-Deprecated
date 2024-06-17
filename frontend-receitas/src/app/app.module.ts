@@ -32,6 +32,10 @@ import {MatDialogClose} from "@angular/material/dialog";
 import { DialogSucessComponent } from './component/dialog-sucess/dialog-sucess.component';
 import { DialogUpdateComponent } from './component/dialog-update/dialog-update.component';
 import { LoginComponent } from './component/login/login.component';
+import {MatDrawer, MatDrawerContainer, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
+import {MatListItem, MatNavList} from "@angular/material/list";
+import {MatSidenav} from "@angular/material/sidenav";
+
 
 @NgModule({
   declarations: [
@@ -72,7 +76,14 @@ import { LoginComponent } from './component/login/login.component';
     MatCardContent,
     MatTooltip,
     MatAnchor,
-    MatDialogClose
+    MatDialogClose,
+    MatDrawerContainer,
+    MatDrawer,
+    MatNavList,
+    MatListItem,
+    MatSidenavContainer,
+    MatSidenav,
+    MatSidenavContent
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: `pt-BR`},

@@ -48,3 +48,12 @@ a {
 .full-width {
   width: 100%;
 }
+
+.btn-menu {
+  color: #ECEBE9;
+  font-size: 1.35em;
+  font-weight: bold;
+}
+.mat-toolbar {
+  background: rgba(3, 86, 98, 0.85);
+}
