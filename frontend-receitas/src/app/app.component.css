@@ -1,0 +1,155 @@
+mat-toolbar {
+  position: relative;
+  z-index: 5;
+  /*background-color: background: url("/assets/background.jpg");*/
+}
+
+.content {
+  padding: 0px  ;
+}
+
+.content-card {
+  margin-top: 15px;
+  height: 75vh;
+  border-radius: 9px;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 64px);
+  background-color: rgb(57, 164, 218, 0.1);
+}
+
+mat-sidenav, mat-sidenav-content {
+  transition: all 500ms ease-in-out;
+}
+
+mat-sidenav {
+  background-color: rgba(33, 33, 33, 0.9);
+}
+
+/*mat-sidenav-content {*/
+/*  background: url("/assets/background.jpg")*/
+/*}*/
+
+.header-space {
+  flex: 1 1 auto;
+}
+
+.header-title {
+  color: #f8f8f8;
+  font-size: 2.95em;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  /*-webkit-text-stroke: 1px #508dd3;*/
+
+}
+.header-subtitle {
+  color: #ECEBE9;
+  font-size: 1.1em;
+  text-shadow: 2px 2px 4px rgb(48, 48, 58);
+  /*-webkit-text-stroke: 0.3px #259a8f;*/
+
+}
+.esquerda {
+  transform: rotateY(180deg);
+}
+
+mat-card {
+  background-color: rgb(253, 241, 255);
+}
+
+h1 {
+  color: #000000;
+  font-size: 1.9em;
+  text-shadow: 2px 2px 4px rgba(73, 73, 73, 0.5);
+  -webkit-text-stroke: 0.5px #4d4d4d;
+  text-align: center;
+
+}
+p {
+  padding: 0 10px;
+  line-height: 1.8;
+}
+
+ul li {
+  padding-right: 10px;
+  line-height: 1.6;
+}
+
+h3 {
+  padding: 5px 20px;
+  margin: 0;
+}
+
+div#header {
+  position: relative;
+}
+
+div#header h1 {
+  height: 80px;
+  line-height: 80px;
+  margin: 0;
+  padding-left: 10px;
+  background: #e0e0e0;
+  color: #292929;
+}
+
+div#header a {
+  position: absolute;
+  right: 0;
+  top: 23px;
+  padding: 10px;
+  color: #006;
+}
+
+div#navigation li {
+  list-style: none;
+}
+
+div#footer {
+  background-color: rgb(33, 33, 33);
+  color: #fff;
+  max-width: 99.5%;
+}
+
+div#footer p {
+  padding: 20px 10px;
+}
+
+div#container {
+  width: 100%;
+  margin: 0 auto;
+  color: black;
+  padding: 0px 20px 0px;
+}
+
+div#content {
+  float: right;
+  height: 75vh;
+  padding: 10px 10px 10px;
+}
+div#wrapper {
+  float: right;
+  max-width: 83%;
+  height: 75vh;
+  padding: 10px 10px 10px;
+}
+div#navigation {
+  float: left;
+  width: 30vh;
+  padding-top: 10px;
+  height: 55vh;
+  margin-bottom: 10px;
+}
+
+div#extra {
+  float: left;
+  clear: left;
+  width: 30vh;
+  height: 20vh;
+}
+
+div#footer {
+  clear: both;
+  width: 100%;
+}
+

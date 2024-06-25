@@ -1,3 +1,146 @@
-<router-outlet></router-outlet>
+<head>
+  <title>HTML FlexBox Template - Two columns fixed, right content</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  <meta name="description"
+        content="Use this HTML basic website two columns fixed layout template with the navigation menu and the extra stuff on the left column, the main content on the right.">
+  <meta name="generator" content="HAPedit 3.1">
+  <link rel="canonical" href="https://www.w3docs.com/snippets/html/layout_templates/34.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="HTML FlexBox Template - Two columns fixed, right content"/>
+  <meta property="og:description"
+        content="Use this HTML basic website two columns fixed layout template with the navigation menu and the extra stuff on the left column, the main content on the right."/>
+  <meta property="og:image" content="https://www.w3docs.com/build/images/logo-amp.png"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="192"/>
+  <meta property="og:image:height" content="192"/>
+  <meta property="og:image:alt" content="W3dcos"/>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
-<!--<app-navbar></app-navbar>-->
+</head>
+
+<mat-toolbar class="mat-elevation-z4">
+  <button mat-icon-button (click)="collapsed.set(!collapsed())">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <img src="/assets/logo.png" alt="Logo De Receitas Digitais" style="width: 45px; height: 45px;">
+  <span class="header-title">MedLabs </span>
+  <!--  <span class="header-space"></span>-->
+  <img src="/assets/logo.png" alt="Logo laboratorio" style="width: 45px; height: 45px;" class="esquerda">
+
+  <span class="header-space"></span>
+  <button mat-button><span class="btn-menu">Home</span></button>
+  <button mat-button><span class="btn-menu">Contact</span></button>
+  <button mat-button><span class="btn-menu">About</span></button>
+<!--  <button >-->
+    <mat-icon mat-button [matMenuTriggerFor]="menu" color="secondary" style="cursor: pointer">account_circle</mat-icon>
+<!--  </button>-->
+  <mat-menu #menu="matMenu" >
+    <button mat-menu-item>Conta</button>
+    <button mat-menu-item>Sair</button>
+  </mat-menu>
+
+</mat-toolbar>
+
+<!--    SIDENAV CODE-->
+<mat-sidenav-container>
+  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
+    <app-custom-sidenav [collapsed]="collapsed()"></app-custom-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
+    <div style="max-width: 99%">
+      <mat-card appearance="outlined" id="header">
+        <mat-card-content class="mat-elevation-z8" style="width: 99%"><h1>
+          Sistema de Agendamento
+        </h1></mat-card-content>
+      </mat-card>
+      <div id="container">
+        <div id="wrapper">
+          <!--        <div id="content"  >-->
+          <mat-card id="content">
+            <mat-card-content class="mat-elevation-z8" style="height: 72vh;">
+              <p><strong>1. CONTEUDO PRINCIPAL</strong></p>
+              <h3>What is Lorem Ipsum?</h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+                of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+              <H3>Why do we use it?</H3>
+              <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
+                letters, as opposed to using 'Content here, content here', making it look like readable English. Many
+                desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a
+                search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved
+                over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </p>
+              <h3>Where does it come from?</h3>
+              <p>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+                (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+                amet..", comes from a line in section 1.10.32.
+
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+                1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+                original form, accompanied by English versions from the 1914 translation by H. Rackham.
+              </p>
+            </mat-card-content>
+          </mat-card>
+
+          <!--        </div>-->
+        </div>
+        <div id="navigation">
+          <mat-card style="height: 100%">
+            <mat-card-content class="mat-elevation-z8" style="height: 100%">
+              <p><strong>2. LISTAGEM DE EXAMES (IMAGE SLIDER)</strong></p>
+              <h3>EXAMES REALIZADOS</h3>
+              <ul>
+                <li>EXAME 1</li>
+                <li>EXAME 2</li>
+                <li>EXAME 3</li>
+                <li>EXAME 4</li>
+                <li>EXAME 5</li>
+              </ul>
+              <h3>INFO ADICIONAIS </h3>
+              <ul>
+                <li>INFO 1</li>
+                <li>INFO 2</li>
+                <li>INFO 3</li>
+                <li>INFO 4</li>
+                <li>INFO 5</li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div id="extra">
+          <mat-card>
+            <mat-card-content class="mat-elevation-z8" style="height: 16vh; border-radius: 9px">
+              <p><strong>3. DADOS DE CONTATO</strong></p>
+              <h3>ADICIONAR LINKS:</h3>
+              <ul>
+                <li>WHATSAPP</li>
+                <li>EMAIL</li>
+                <li>TELEFONE</li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div id="footer">
+          <p>ADICIONAR INFORMAÇÕES RODA PÉ</p>
+        </div>
+      </div>
+      <script type="text/javascript">AddFillerLink("content", "navigation", "extra")</script>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
